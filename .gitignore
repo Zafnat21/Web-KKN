@@ -1,0 +1,11 @@
+# Ignore raw PDFs
+*.pdf
+
+# Ignore raw folders in root
+/MAY/
+/JUNE/
+
+# Ignore raw logo files in root (already copied to assets/img/logo)
+/LOGO KKN.png
+/UMMI-.png
+/logo diktisaintek.png

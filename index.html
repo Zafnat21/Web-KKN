@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KKN Desa Mekarsari 2026 - Universitas Muhammadiyah Sukabumi</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Website Resmi Dokumentasi dan Timeline Kegiatan KKN Desa Mekarsari, Kabupaten Sukabumi. Dibuat oleh Tim KKN Universitas Muhammadiyah Sukabumi (UMMI) 2026.">
+  <meta name="keywords" content="KKN, Desa Mekarsari, Sukabumi, UMMI, Universitas Muhammadiyah Sukabumi, Dokumentasi, Timeline Kegiatan">
+  <meta name="author" content="KKN Desa Mekarsari UMMI 2026">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KKN Desa Mekarsari 2026 - UMMI Sukabumi">
+  <meta property="og:description" content="Website Resmi Dokumentasi dan Timeline Kegiatan KKN Desa Mekarsari, Kabupaten Sukabumi.">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#1b4332',      // Hijau tua
+              medium: '#2d6a4f',    // Hijau sedang
+              light: '#d8f3dc',     // Hijau muda
+              softBg: '#f4f9f4',    // Hijau sangat muda (background)
+              yellow: '#fcf3c6',    // Kuning lembut
+              accent: '#f59e0b',    // Kuning aksen hangat
+              darkgray: '#2d3748',  // Abu gelap
+              lightgray: '#718096', // Abu terang
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS for transitions and extra tweaks -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-brand-softBg text-brand-darkgray font-sans antialiased">
+
+  <!-- ==========================================================================
+       HEADER / FIXED NAVBAR
+       ========================================================================== -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo KKN & Campus info -->
+        <a href="#beranda" class="flex items-center space-x-3 group">
+          <div class="flex items-center space-x-2.5 bg-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-brand-yellow/30 shadow-inner group-hover:border-brand-yellow/60 transition-colors duration-300">
+            <!-- Logo UMMI -->
+            <img src="assets/img/logo/logo-ummi.png" alt="Logo UMMI" class="h-7 w-auto object-contain filter brightness-110" onerror="this.style.display='none';">
+            
+            <!-- Logo KKN (Made Round) -->
+            <div class="h-7 w-7 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm border border-white/10 flex-shrink-0">
+              <img src="assets/img/logo/logo-kkn.png" alt="Logo KKN" class="h-full w-full object-cover" onerror="this.parentNode.style.display='none';">
+            </div>
+            
+            <!-- Logo Diktisaintek -->
+            <img src="assets/img/logo/logo-diktisaintek.png" alt="Logo Diktisaintek" class="h-7 w-auto object-contain filter brightness-110" onerror="this.style.display='none';">
+          </div>
+          <div class="flex flex-col hidden sm:flex">
+            <span class="font-extrabold text-sm leading-none tracking-wider text-white group-hover:text-brand-yellow transition-colors duration-300">KKN MEKARSARI</span>
+            <span class="text-[9px] text-brand-light/80 tracking-widest font-medium uppercase mt-0.5">Kec. Sagaranten</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Nav Items -->
+        <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="#beranda" class="nav-link relative px-3 py-2 text-sm font-medium text-white/90 hover:text-brand-yellow transition-colors duration-300">Beranda</a>
+          <a href="#tentang" class="nav-link relative px-3 py-2 text-sm font-medium text-white/90 hover:text-brand-yellow transition-colors duration-300">Tentang</a>
+          <a href="#timeline" class="nav-link relative px-3 py-2 text-sm font-medium text-white/90 hover:text-brand-yellow transition-colors duration-300">Timeline</a>
+          <a href="#galeri" class="nav-link relative px-3 py-2 text-sm font-medium text-white/90 hover:text-brand-yellow transition-colors duration-300">Galeri</a>
+          <a href="#tim" class="nav-link relative px-3 py-2 text-sm font-medium text-white/90 hover:text-brand-yellow transition-colors duration-300">Tim</a>
+          <a href="#kontak" class="nav-link relative px-3 py-2 text-sm font-medium text-white/90 hover:text-brand-yellow transition-colors duration-300">Kontak</a>
+        </div>
+        
+        <!-- Mobile menu toggle -->
+        <div class="flex md:hidden">
+          <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-brand-yellow hover:bg-white/10 focus:outline-none transition duration-300" aria-controls="mobile-menu" aria-expanded="false">
+            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu (dropdown) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-md border-t border-brand-medium/20 shadow-xl">
+      <div class="px-4 pt-3 pb-4 space-y-1 sm:px-3 text-center">
+        <a href="#beranda" class="block px-3 py-3 rounded-md text-base font-semibold text-white hover:text-brand-yellow hover:bg-brand-medium/30 transition duration-300">Beranda</a>
+        <a href="#tentang" class="block px-3 py-3 rounded-md text-base font-semibold text-white hover:text-brand-yellow hover:bg-brand-medium/30 transition duration-300">Tentang</a>
+        <a href="#timeline" class="block px-3 py-3 rounded-md text-base font-semibold text-white hover:text-brand-yellow hover:bg-brand-medium/30 transition duration-300">Timeline</a>
+        <a href="#galeri" class="block px-3 py-3 rounded-md text-base font-semibold text-white hover:text-brand-yellow hover:bg-brand-medium/30 transition duration-300">Galeri</a>
+        <a href="#tim" class="block px-3 py-3 rounded-md text-base font-semibold text-white hover:text-brand-yellow hover:bg-brand-medium/30 transition duration-300">Tim</a>
+        <a href="#kontak" class="block px-3 py-3 rounded-md text-base font-semibold text-white hover:text-brand-yellow hover:bg-brand-medium/30 transition duration-300">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section id="beranda" class="relative min-h-[90vh] md:h-screen flex items-center justify-center bg-brand-dark overflow-hidden py-24 md:py-0">
+    <!-- Hero Background with Gradient Overlays -->
+    <div class="absolute inset-0 z-0">
+      <!-- Fallback nice forest gradient (always rendered in the background) -->
+      <div class="absolute inset-0 w-full h-full bg-gradient-to-tr from-[#0b1d14] via-[#103122] to-[#1b4332] z-0"></div>
+      
+      <!-- Actual hero image (rendered on top, fades out if missing) -->
+      <img src="assets/img/gallery/gal-3.jpg" alt="Pemandangan Desa Mekarsari" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.35] scale-105 transform transition duration-[10000ms] z-10" onerror="this.style.opacity='0'; this.style.pointerEvents='none';">
+      
+      <!-- Dark vignette overlay for text legibility and cinematic aesthetic -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-brand-dark/40 to-brand-dark/95 z-20 pointer-events-none"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white select-none">
+      <div class="inline-flex items-center space-x-2 bg-brand-yellow/10 backdrop-blur-sm border border-brand-yellow/30 px-4 py-1.5 rounded-full mb-6 animate-pulse animate-on-load">
+        <span class="w-2 h-2 rounded-full bg-brand-yellow"></span>
+        <span class="text-xs md:text-sm font-semibold tracking-wider text-brand-yellow uppercase">KKN UMMI Sukabumi 2026</span>
+      </div>
+      
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-md animate-on-load load-delay-150">
+        KKN Desa <span class="text-brand-yellow underline decoration-brand-medium/40 decoration-wavy underline-offset-8">Mekarsari</span>
+      </h1>
+      
+      <p class="font-light text-base sm:text-xl md:text-2xl text-brand-light/95 max-w-3xl mx-auto mb-10 leading-relaxed animate-on-load load-delay-300">
+        Universitas Muhammadiyah Sukabumi<br>
+        <span class="text-white/80 font-normal">Perjalanan kegiatan, pengabdian, dan dokumentasi KKN di Desa Mekarsari.</span>
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-on-load load-delay-450">
+        <a href="#timeline" id="cta-btn" class="group flex items-center justify-center px-8 py-4 bg-brand-yellow text-brand-dark font-bold rounded-full shadow-lg hover:bg-white hover:text-brand-dark transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto">
+          Lihat Timeline
+          <svg class="w-5 h-5 ml-2 transform group-hover:translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+        <a href="#tentang" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 font-semibold rounded-full backdrop-blur-sm transition-all duration-300 w-full sm:w-auto">
+          Selengkapnya
+        </a>
+      </div>
+    </div>
+
+    <!-- Floating Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
+      <div class="animate-on-load load-delay-600 flex flex-col items-center">
+        <span class="text-xs uppercase tracking-widest text-brand-light/60 mb-2 font-medium">Scroll Ke Bawah</span>
+        <div class="w-6 h-10 border-2 border-brand-light/30 rounded-full flex justify-center p-1.5">
+          <div class="w-1.5 h-1.5 bg-brand-yellow rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION TENTANG
+       ========================================================================== -->
+  <section id="tentang" class="py-24 md:py-32 bg-white relative overflow-hidden">
+    <!-- Decorative Green Mesh/Shape -->
+    <div class="absolute right-0 top-0 w-96 h-96 bg-brand-softBg rounded-full filter blur-3xl opacity-60 pointer-events-none"></div>
+    <div class="absolute left-0 bottom-0 w-96 h-96 bg-brand-light/30 rounded-full filter blur-3xl opacity-50 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">Tentang Pengabdian Kami</h2>
+        <div class="w-24 h-1 bg-brand-medium mx-auto rounded-full mb-6"></div>
+        <p class="text-brand-lightgray text-base sm:text-lg">
+          Membangun sinergi, memberdayakan potensi lokal, dan merajut kisah pengabdian mahasiswa Universitas Muhammadiyah Sukabumi bersama masyarakat Desa Mekarsari.
+        </p>
+      </div>
+
+      <!-- Layout 2 Kolom -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+        
+        <!-- Kolom KKN -->
+        <div class="flex flex-col justify-between bg-brand-softBg/60 border border-brand-light/30 p-8 sm:p-12 rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300 reveal-left">
+          <div>
+            <div class="w-12 h-12 flex items-center justify-center bg-brand-medium text-brand-yellow rounded-2xl mb-8 shadow-inner">
+              <!-- Book Icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">KKN Berdampak OVOD</h3>
+            <p class="text-brand-darkgray leading-relaxed mb-6 font-light text-sm sm:text-base">
+              <strong>OVOD (One Village One Department)</strong> merupakan program inovatif dari gerakan Kampus UMMI Berdampak. Inisiatif pengabdian masyarakat ini berbasis keilmuan, di mana setiap program studi di Universitas Muhammadiyah Sukabumi berkomitmen mendampingi satu desa secara berkelanjutan demi mendorong status desa menjadi lebih maju atau mandiri.
+            </p>
+            <p class="text-brand-darkgray leading-relaxed font-light text-sm sm:text-base">
+              Melalui sinergi akademisi, mahasiswa KKN memfokuskan pilar kerjanya pada optimalisasi indeks pembangunan desa—terutama di bidang lingkungan (sampah), kesehatan, pendidikan, dan nilai agama guna mewujudkan transformasi yang nyata dan berkelanjutan.
+            </p>
+          </div>
+          
+          <div class="mt-8 pt-6 border-t border-brand-light/50 flex items-center space-x-3 text-brand-medium font-semibold text-sm">
+            <span>Universitas Muhammadiyah Sukabumi</span>
+            <span>&bull;</span>
+            <span>2026</span>
+          </div>
+        </div>
+
+        <!-- Kolom Desa Mekarsari -->
+        <div class="flex flex-col justify-between bg-brand-yellow/10 border border-brand-yellow/40 p-8 sm:p-12 rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300 reveal-right">
+          <div>
+            <div class="w-12 h-12 flex items-center justify-center bg-brand-yellow text-brand-dark rounded-2xl mb-8 shadow-inner">
+              <!-- Home/Village Icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">Desa Mekarsari, Sukabumi</h3>
+            <p class="text-brand-darkgray leading-relaxed mb-6 font-light text-sm sm:text-base">
+              Desa Mekarsari terletak di wilayah Kecamatan Sagaranten, Kabupaten Sukabumi, Jawa Barat dengan luas wilayah <strong>2.098,72 Ha</strong>. Desa ini secara administratif terbagi menjadi <strong>4 Dusun, 4 RW, dan 25 RT</strong>, serta menjadi tempat tinggal bagi <strong>3.561 Jiwa</strong> penduduk.
+            </p>
+            <p class="text-brand-darkgray leading-relaxed font-light text-sm sm:text-base">
+              Sebagai desa pertanian yang dikelilingi bentang alam yang asri, mata pencaharian utama warganya adalah petani. Tim KKN hadir bersinergi untuk mendokumentasikan, memetakan, dan memberdayakan berbagai potensi unggulan desa ini.
+            </p>
+            <!-- Google Maps Embed Card -->
+            <div class="h-44 w-full rounded-2xl overflow-hidden border border-brand-yellow/20 shadow-sm mt-6">
+              <iframe 
+                src="https://maps.google.com/maps?q=Kantor%20Desa%20Mekarsari%20Sagaranten%20Sukabumi&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                class="w-full h-full border-0 filter grayscale-[15%] contrast-[105%] brightness-[95%]" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-brand-light/50 flex items-center space-x-3 text-brand-medium font-semibold text-sm">
+            <span>Kecamatan Sagaranten</span>
+            <span>&bull;</span>
+            <span>Kabupaten Sukabumi</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sub-section: 3 Potensi Utama Desa -->
+      <div class="mt-16 reveal">
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-dark text-center mb-10">3 Potensi Utama Desa Mekarsari</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Potensi 1: Pertanian & Perkebunan -->
+          <div class="bg-brand-softBg/40 border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-brand-medium/10 text-brand-medium flex items-center justify-center font-bold text-sm">1</span>
+              <h4 class="font-bold text-brand-dark text-base sm:text-lg">Pertanian & Perkebunan</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Lahan subur dengan komoditas pertanian utama berupa <strong>cabai keriting</strong> dan <strong>cabai caplak</strong>, serta budidaya perkebunan unggulan seperti <strong>jagung hibrida</strong> dan <strong>kapulaga</strong>.
+            </p>
+          </div>
+
+          <!-- Potensi 2: Peternakan Mandiri -->
+          <div class="bg-brand-softBg/40 border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-brand-medium/10 text-brand-medium flex items-center justify-center font-bold text-sm">2</span>
+              <h4 class="font-bold text-brand-dark text-base sm:text-lg">Sektor Peternakan</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Terdapat kelompok peternak sapi aktif di bawah <strong>Gapoktan</strong> serta empat lokasi peternakan ayam potong modern yang bermitra dengan perusahaan swasta nasional.
+            </p>
+          </div>
+
+          <!-- Potensi 3: UMKM & Wisata Alam -->
+          <div class="bg-brand-softBg/40 border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-brand-medium/10 text-brand-medium flex items-center justify-center font-bold text-sm">3</span>
+              <h4 class="font-bold text-brand-dark text-base sm:text-lg">Wisata & Produk Khas</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Keindahan alam potensial di <strong>Gunung Gedogan</strong> dan <strong>Curug Cikadu</strong> yang prospektif, didukung produk khas lokal berupa pembuatan <strong>gula aren tradisional</strong>.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-16 border-t border-brand-light/30 reveal"></div>
+
+      <!-- Pilar Program Kerja Utama -->
+      <div class="reveal">
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark text-center mb-4">Pilar Program Kerja Kami (SABAS)</h3>
+        <p class="text-brand-lightgray text-center text-sm sm:text-base max-w-3xl mx-auto mb-12 font-light">
+          Program kerja KKN UMMI di Desa Mekarsari diselaraskan dengan tema utama <strong>SABAS (Mekarsari Sabas: Sampah Habis, Badan Sehat, Otak Cerdas)</strong> demi mewujudkan sinergi literasi dan nilai agama dalam membangun desa.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <!-- Pilar 1: Sampah Habis -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Trash Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Sampah Habis</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Pemberdayaan pengelolaan sampah mandiri, penyediaan wadah sampah terpilah (organik & anorganik), aksi gotong royong berkala, serta kampanye kebersihan lingkungan desa bebas sampah.
+            </p>
+          </div>
+
+          <!-- Pilar 2: Badan Sehat -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Heart/Shield Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Badan Sehat</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Sosialisasi pencegahan stunting pada balita, optimalisasi Posyandu, edukasi PHBS (Perilaku Hidup Bersih & Sehat), serta sanitasi lingkungan sehat bagi seluruh keluarga di Desa Mekarsari.
+            </p>
+          </div>
+
+          <!-- Pilar 3: Otak Cerdas -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Book Open Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Otak Cerdas</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Pendampingan belajar interaktif bagi anak sekolah dasar, pembentukan pojok literasi (sudut baca), serta program bimbingan kreativitas untuk mencerdaskan generasi penerus desa.
+            </p>
+          </div>
+
+          <!-- Pilar 4: Sinergi Nilai Agama -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Sparkles Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Sinergi Agama & Karakter</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Integrasi nilai agama dalam pelestarian alam (eco-theology), pembiasaan akhlak terpuji sejak dini, serta kolaborasi aktif dalam kegiatan keagamaan masyarakat guna membangun karakter mulia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION TIMELINE (STAR OF THE PAGE)
+       ========================================================================== -->
+  <section id="timeline" class="py-24 bg-brand-softBg relative">
+    
+    <!-- Mobile Sticky Month Bar (Visible on mobile only) -->
+    <div class="sticky top-16 md:hidden z-30 bg-brand-softBg/90 backdrop-blur-md py-3 px-4 border-b border-brand-light/60 shadow-sm flex items-center justify-center space-x-2">
+      <button data-target="july-block" class="month-btn active text-xs font-semibold px-4 py-2 rounded-full border border-brand-medium text-brand-medium hover:bg-brand-medium/10 transition-all duration-300">JULI</button>
+      <button data-target="june-block" class="month-btn text-xs font-semibold px-4 py-2 rounded-full border border-brand-medium text-brand-medium hover:bg-brand-medium/10 transition-all duration-300">JUNI</button>
+      <button data-target="may-block" class="month-btn text-xs font-semibold px-4 py-2 rounded-full border border-brand-medium text-brand-medium hover:bg-brand-medium/10 transition-all duration-300">MEI</button>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">Timeline Kegiatan</h2>
+        <div class="w-24 h-1 bg-brand-medium mx-auto rounded-full mb-6"></div>
+        <p class="text-brand-lightgray text-sm sm:text-base">
+          Ikuti alur perjalanan pengabdian kami, mulai dari perencanaan awal di kampus, koordinasi lapangan, hingga pelaksanaan program kerja inti di Desa Mekarsari.
+        </p>
+      </div>
+
+      <!-- Main Columns Grid (Left: Sticky Month Nav on Desktop, Right: Timeline Content) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Sticky Months Navigation Panel (Desktop only, Toei style) -->
+        <div class="hidden lg:block lg:col-span-3 sticky top-24 pr-4 border-r border-brand-light/20">
+          <div class="relative pl-2">
+            <!-- Vertical connecting line for month navigation -->
+            <div class="absolute left-[19px] top-4 bottom-4 w-[2px] bg-brand-medium/20"></div>
+            
+            <div class="flex flex-col space-y-8 relative">
+              <!-- July -->
+              <button data-target="july-block" class="month-btn active group flex items-center space-x-4 text-left font-bold text-sm text-brand-lightgray hover:text-brand-dark transition-all duration-300 relative focus:outline-none">
+                <!-- Navigation dot wrapper -->
+                <div class="w-[24px] h-[24px] rounded-full border-2 border-brand-medium/30 bg-brand-softBg group-hover:border-brand-medium flex items-center justify-center transition-all duration-300 relative z-10 month-dot-inner">
+                  <div class="w-2.5 h-2.5 rounded-full bg-transparent group-hover:bg-brand-medium transition-all duration-300 month-dot-core"></div>
+                </div>
+                <span class="tracking-wider uppercase">Juli 2026</span>
+              </button>
+              
+              <!-- June -->
+              <button data-target="june-block" class="month-btn group flex items-center space-x-4 text-left font-bold text-sm text-brand-lightgray hover:text-brand-dark transition-all duration-300 relative focus:outline-none">
+                <div class="w-[24px] h-[24px] rounded-full border-2 border-brand-medium/30 bg-brand-softBg group-hover:border-brand-medium flex items-center justify-center transition-all duration-300 relative z-10 month-dot-inner">
+                  <div class="w-2.5 h-2.5 rounded-full bg-transparent group-hover:bg-brand-medium transition-all duration-300 month-dot-core"></div>
+                </div>
+                <span class="tracking-wider uppercase">Juni 2026</span>
+              </button>
+              
+              <!-- May -->
+              <button data-target="may-block" class="month-btn group flex items-center space-x-4 text-left font-bold text-sm text-brand-lightgray hover:text-brand-dark transition-all duration-300 relative focus:outline-none">
+                <div class="w-[24px] h-[24px] rounded-full border-2 border-brand-medium/30 bg-brand-softBg group-hover:border-brand-medium flex items-center justify-center transition-all duration-300 relative z-10 month-dot-inner">
+                  <div class="w-2.5 h-2.5 rounded-full bg-transparent group-hover:bg-brand-medium transition-all duration-300 month-dot-core"></div>
+                </div>
+                <span class="tracking-wider uppercase">Mei 2026</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Activities Column -->
+        <div class="lg:col-span-9 space-y-16">
+          
+          <!-- ==================== MONTH: JULY ==================== -->
+          <div id="july-block" class="month-block relative pl-8 md:pl-12">
+            <!-- Central Line -->
+            <div class="timeline-line"></div>
+            
+            <!-- Month Header Badge -->
+            <div class="inline-block bg-brand-dark text-brand-yellow font-bold px-6 py-2.5 rounded-full text-sm tracking-wider uppercase shadow-md mb-12 -ml-8 md:-ml-12 border border-brand-yellow/20 relative z-20 reveal-zoom">
+              Juli 2026
+            </div>
+
+            <!-- Activity: Rencana Kegiatan (Placeholder) -->
+            <div class="timeline-item relative mb-8 reveal">
+              <!-- Animated Bullet Dot -->
+              <div class="timeline-dot top-2"></div>
+              
+              <!-- Content Card -->
+              <div class="bg-white border border-brand-light/30 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                  <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-medium bg-brand-light/60 px-3 py-1 rounded-full w-fit">
+                    Rencana Kegiatan
+                  </span>
+                  <div class="text-sm font-semibold text-brand-medium bg-brand-yellow px-3 py-1 rounded-md border border-brand-medium/10 w-fit">
+                    Juli 2026
+                  </div>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">Pelaksanaan KKN Tematik</h3>
+                <h4 class="text-sm font-medium text-brand-lightgray mb-6">Program Kerja & Pengabdian Masyarakat</h4>
+                
+                <!-- Long bullet text-boxes (No paragraph) -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Pembukaan resmi, pelepasan mahasiswa di Desa Mekarsari, dan penataan posko kelompok.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Implementasi penuh program kerja di bidang Digitalisasi, Ekonomi, Kesehatan, dan Pendidikan.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Penyusunan laporan hasil akhir, lokakarya desa, penutupan KKN, dan perpisahan dengan warga.</span>
+                  </div>
+                </div>
+
+                <!-- Location Pin -->
+                <div class="flex items-center text-xs text-brand-medium font-semibold mb-6">
+                  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Lokasi: Desa Mekarsari, Kabupaten Sukabumi
+                </div>
+
+                <!-- Photos Grid (Floating Card Placeholder) -->
+                <div>
+                  <h5 class="text-xs uppercase tracking-widest text-brand-lightgray/80 font-bold mb-3">Dokumentasi Kegiatan</h5>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/july-placeholder.jpg" alt="Dokumentasi Juli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Dokumentasi Juli - Belum Tersedia">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ==================== MONTH: JUNE ==================== -->
+          <div id="june-block" class="month-block relative pl-8 md:pl-12 pt-8">
+            <!-- Central Line -->
+            <div class="timeline-line"></div>
+            
+            <!-- Month Header Badge -->
+            <div class="inline-block bg-brand-dark text-brand-yellow font-bold px-6 py-2.5 rounded-full text-sm tracking-wider uppercase shadow-md mb-12 -ml-8 md:-ml-12 border border-brand-yellow/20 relative z-20 reveal-zoom">
+              Juni 2026
+            </div>
+
+            <!-- Activity 1: 21 Juni 2026 -->
+            <div class="timeline-item relative mb-16 reveal">
+              <!-- Animated Bullet Dot -->
+              <div class="timeline-dot top-2"></div>
+              
+              <!-- Content Card -->
+              <div class="bg-white border border-brand-light/30 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                  <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-medium bg-brand-light/60 px-3 py-1 rounded-full w-fit">
+                    Rapat Ke-4
+                  </span>
+                  <div class="text-sm font-semibold text-brand-medium bg-brand-yellow px-3 py-1 rounded-md border border-brand-medium/10 w-fit">
+                    21 Juni 2026
+                  </div>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">Rapat Kelompok Ke-4</h3>
+                <h4 class="text-sm font-medium text-brand-lightgray mb-6">Finalisasi Laporan Rencana Kerja & Teknis Posko</h4>
+                
+                <!-- Long bullet text-boxes (No paragraph) -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Evaluasi hasil survey lapangan untuk finalisasi sasaran program kerja utama.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Penyusunan anggaran biaya operasional KKN dan pembagian perlengkapan posko.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Koordinasi akhir mengenai jadwal keberangkatan dan transportasi ke Desa Mekarsari.</span>
+                  </div>
+                </div>
+
+                <!-- Location Pin -->
+                <div class="flex items-center text-xs text-brand-medium font-semibold mb-6">
+                  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Lokasi: Somewhere Coffee
+                </div>
+
+                <!-- Photos Grid (Floating Card) -->
+                <div>
+                  <h5 class="text-xs uppercase tracking-widest text-brand-lightgray/80 font-bold mb-3">Dokumentasi Rapat</h5>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-4a.jpg" alt="Rapat 4 - Sesi 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-4 KKN - Finalisasi Laporan Program Kerja">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-4b.jpg" alt="Rapat 4 - Sesi 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-4 KKN - Pembahasan Kebutuhan Logistik Posko">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group col-span-2 md:col-span-1">
+                      <img src="assets/img/timeline/june-4c.jpg" alt="Rapat 4 - Sesi 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-4 KKN - Pembagian Tugas Keberangkatan">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 2: 16 Juni 2026 -->
+            <div class="timeline-item relative mb-16 reveal">
+              <!-- Animated Bullet Dot -->
+              <div class="timeline-dot top-2"></div>
+              
+              <!-- Content Card -->
+              <div class="bg-white border border-brand-light/30 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                  <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-medium bg-brand-light/60 px-3 py-1 rounded-full w-fit">
+                    Survey Lapangan
+                  </span>
+                  <div class="text-sm font-semibold text-brand-medium bg-brand-yellow px-3 py-1 rounded-md border border-brand-medium/10 w-fit">
+                    16 Juni 2026
+                  </div>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">Survey Pertama Ke Desa Mekarsari</h3>
+                <h4 class="text-sm font-medium text-brand-lightgray mb-6">Observasi Geografis & Silaturahmi Perangkat Desa</h4>
+                
+                <!-- Long bullet text-boxes (No paragraph) -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Kunjungan dan perkenalan tim KKN UMMI kepada jajaran staf Desa Mekarsari.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Wawancara dengan Sekretaris Desa mengenai profil kependudukan dan masalah kesehatan.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Peninjauan langsung batas wilayah, fasilitas umum, dan potensi pertanian desa.</span>
+                  </div>
+                </div>
+
+                <!-- Location Pin -->
+                <div class="flex items-center text-xs text-brand-medium font-semibold mb-6">
+                  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Lokasi: Desa Mekarsari, Kecamatan Sagaranten
+                </div>
+
+                <!-- Photos Grid (Floating Card) -->
+                <div>
+                  <h5 class="text-xs uppercase tracking-widest text-brand-lightgray/80 font-bold mb-3">Dokumentasi Survey</h5>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-3a.jpg" alt="Survey - Sesi 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Survey Lokasi - Wawancara dengan Perangkat Desa">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-3b.jpg" alt="Survey - Sesi 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Survey Lokasi - Peninjauan Pertanian Desa Mekarsari">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group col-span-2 md:col-span-1">
+                      <img src="assets/img/timeline/june-3c.jpg" alt="Survey - Sesi 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Survey Lokasi - Tinjauan Batas Wilayah Desa">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 3: 12 Juni 2026 -->
+            <div class="timeline-item relative mb-16 reveal">
+              <!-- Animated Bullet Dot -->
+              <div class="timeline-dot top-2"></div>
+              
+              <!-- Content Card -->
+              <div class="bg-white border border-brand-light/30 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                  <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-medium bg-brand-light/60 px-3 py-1 rounded-full w-fit">
+                    Rapat Ke-3
+                  </span>
+                  <div class="text-sm font-semibold text-brand-medium bg-brand-yellow px-3 py-1 rounded-md border border-brand-medium/10 w-fit">
+                    12 Juni 2026
+                  </div>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">Rapat Kelompok Ke-3</h3>
+                <h4 class="text-sm font-medium text-brand-lightgray mb-6">Penyusunan Rencana Program Kerja & Instrumen Survey</h4>
+                
+                <!-- Long bullet text-boxes (No paragraph) -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Brainstorming pembagian program kerja ke dalam 4 pilar utama pemberdayaan.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Penyusunan daftar wawancara kualitatif untuk survey ke perangkat desa Mekarsari.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Pemetaan instrumen kuisioner untuk identifikasi potensi UMKM desa.</span>
+                  </div>
+                </div>
+
+                <!-- Location Pin -->
+                <div class="flex items-center text-xs text-brand-medium font-semibold mb-6">
+                  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Lokasi: Rumah Ketua
+                </div>
+
+                <!-- Photos Grid (Floating Card) -->
+                <div>
+                  <h5 class="text-xs uppercase tracking-widest text-brand-lightgray/80 font-bold mb-3">Dokumentasi Rapat</h5>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-2a.jpg" alt="Rapat 3 - Sesi 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-3 KKN - Pemetaan Program 4 Pilar">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-2b.jpg" alt="Rapat 3 - Sesi 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-3 KKN - Penyusunan Kuesioner Warga">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group col-span-2 md:col-span-1">
+                      <img src="assets/img/timeline/june-2c.jpg" alt="Rapat 3 - Sesi 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-3 KKN - Pembahasan Jadwal Kegiatan Survey">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 4: 5 Juni 2026 -->
+            <div class="timeline-item relative mb-8 reveal">
+              <!-- Animated Bullet Dot -->
+              <div class="timeline-dot top-2"></div>
+              
+              <!-- Content Card -->
+              <div class="bg-white border border-brand-light/30 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                  <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-medium bg-brand-light/60 px-3 py-1 rounded-full w-fit">
+                    Rapat Ke-2
+                  </span>
+                  <div class="text-sm font-semibold text-brand-medium bg-brand-yellow px-3 py-1 rounded-md border border-brand-medium/10 w-fit">
+                    5 Juni 2026
+                  </div>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">Rapat Kelompok Ke-2</h3>
+                <h4 class="text-sm font-medium text-brand-lightgray mb-6">Pembahasan Petunjuk Teknis & Kajian Awal Potensi Desa</h4>
+                
+                <!-- Long bullet text-boxes (No paragraph) -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Pembahasan petunjuk teknis pelaksanaan KKN Tematik UMMI Tahun 2026.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Studi literatur awal mengenai kondisi demografi Desa Mekarsari secara online.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Koordinasi iuran wajib awal kelompok untuk operasional perlengkapan dasar.</span>
+                  </div>
+                </div>
+
+                <!-- Location Pin -->
+                <div class="flex items-center text-xs text-brand-medium font-semibold mb-6">
+                  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Lokasi: Kampus Universitas Muhammadiyah Sukabumi
+                </div>
+
+                <!-- Photos Grid (Floating Card) -->
+                <div>
+                  <h5 class="text-xs uppercase tracking-widest text-brand-lightgray/80 font-bold mb-3">Dokumentasi Rapat</h5>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-1a.jpg" alt="Rapat 2 - Sesi 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-2 KKN - Bedah Buku Panduan KKN UMMI">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/june-1b.jpg" alt="Rapat 2 - Sesi 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-2 KKN - Analisis Data Monografi Desa Mekarsari">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group col-span-2 md:col-span-1">
+                      <img src="assets/img/timeline/june-1c.jpg" alt="Rapat 2 - Sesi 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Rapat Ke-2 KKN - Pengumpulan Anggaran Perlengkapan Tim">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ==================== MONTH: MAY ==================== -->
+          <div id="may-block" class="month-block relative pl-8 md:pl-12 pt-8">
+            <!-- Central Line -->
+            <div class="timeline-line"></div>
+            
+            <!-- Month Header Badge -->
+            <div class="inline-block bg-brand-dark text-brand-yellow font-bold px-6 py-2.5 rounded-full text-sm tracking-wider uppercase shadow-md mb-12 -ml-8 md:-ml-12 border border-brand-yellow/20 relative z-20 reveal-zoom">
+              Mei 2026
+            </div>
+
+            <!-- Activity 1: 21 Mei 2026 -->
+            <div class="timeline-item relative mb-8 reveal">
+              <!-- Animated Bullet Dot -->
+              <div class="timeline-dot top-2"></div>
+              
+              <!-- Content Card -->
+              <div class="bg-white border border-brand-light/30 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                  <span class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brand-medium bg-brand-light/60 px-3 py-1 rounded-full w-fit">
+                    Pertemuan Perdana
+                  </span>
+                  <div class="text-sm font-semibold text-brand-medium bg-brand-yellow px-3 py-1 rounded-md border border-brand-medium/10 w-fit">
+                    21 Mei 2026
+                  </div>
+                </div>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-1">Pertemuan Pertama Kelompok KKN</h3>
+                <h4 class="text-sm font-medium text-brand-lightgray mb-6">Koordinasi Awal Anggota Tim Kelompok</h4>
+                
+                <!-- Long bullet text-boxes (No paragraph) -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Perkenalan anggota kelompok KKN UMMI dari berbagai lintas program studi.</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Pembentukan susunan organisasi inti kelompok (Ketua, Sekretaris, Bendahara, Humas).</span>
+                  </div>
+                  <div class="flex items-center space-x-3 bg-brand-softBg border border-brand-light/30 px-4 py-2.5 rounded-xl shadow-sm hover:border-brand-medium/30 transition-all duration-300">
+                    <span class="flex-shrink-0 w-2 h-2 rounded-full bg-brand-medium"></span>
+                    <span class="text-xs sm:text-sm text-brand-darkgray font-medium">Diskusi awal mengenai pembagian tugas umum pengerjaan KKN.</span>
+                  </div>
+                </div>
+
+                <!-- Location Pin -->
+                <div class="flex items-center text-xs text-brand-medium font-semibold mb-6">
+                  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Lokasi: Nama Coffee
+                </div>
+
+                <!-- Photos Grid (Floating Card) -->
+                <div>
+                  <h5 class="text-xs uppercase tracking-widest text-brand-lightgray/80 font-bold mb-3">Dokumentasi Rapat</h5>
+                  <div class="grid grid-cols-2 gap-3.5 max-w-2xl">
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/may-1a.jpg" alt="Pertemuan Pertama - Sesi 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Pertemuan Perdana KKN - Perkenalan Anggota Kelompok">
+                    </div>
+                    <div class="overflow-hidden rounded-2xl aspect-[4/3] bg-brand-dark shadow-lg hover:shadow-2xl hover:-translate-y-2.5 transform transition-all duration-300 cursor-pointer group">
+                      <img src="assets/img/timeline/may-1b.jpg" alt="Pertemuan Pertama - Sesi 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 gallery-trigger" data-caption="Pertemuan Perdana KKN - Pembentukan Struktur Organisasi">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Removed old right month panel (moved to left side) -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION GALERI
+       ========================================================================== -->
+  <section id="galeri" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">Galeri Dokumentasi</h2>
+        <div class="w-24 h-1 bg-brand-medium mx-auto rounded-full mb-6"></div>
+        <p class="text-brand-lightgray text-sm sm:text-base">
+          Kumpulan momen berharga, kerja sama warga, dan keindahan alam selama masa KKN Desa Mekarsari. Klik pada gambar untuk memperbesar foto.
+        </p>
+      </div>
+
+      <!-- Grid Galeri -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Card 1 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/gallery/gal-1.jpg" alt="Dokumentasi KKN 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Pemandangan Bentang Alam Desa Mekarsari Sukabumi">
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/gallery/gal-2.jpg" alt="Dokumentasi KKN 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Diskusi Hangat dengan Kepala Desa Mekarsari">
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-150">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/gallery/gal-3.jpg" alt="Dokumentasi KKN 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Kegiatan Gotong Royong / Kerja Bakti Bersama Warga">
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/gallery/gal-4.jpg" alt="Dokumentasi KKN 4" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Edukasi Kreatif dan Pembagian Alat Tulis di SDN Mekarsari">
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/gallery/gal-5.jpg" alt="Dokumentasi KKN 5" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Pemasangan Signboard Batas Desa & Peta Digital RT">
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-150">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/gallery/gal-6.jpg" alt="Dokumentasi KKN 6" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Foto Bersama Tokoh Agama & Masyarakat Desa">
+          </div>
+        </div>
+
+        <!-- Timeline: May 1a -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/may-1a.jpg" alt="Pertemuan Perdana 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Pertemuan Perdana KKN - Perkenalan Anggota Kelompok (21 Mei)">
+          </div>
+        </div>
+
+        <!-- Timeline: May 1b -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/may-1b.jpg" alt="Pertemuan Perdana 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Pertemuan Perdana KKN - Pembentukan Struktur Organisasi (21 Mei)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 1a -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-150">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-1a.jpg" alt="Rapat Kedua 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-2 KKN - Bedah Buku Panduan KKN UMMI (5 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 1b -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-1b.jpg" alt="Rapat Kedua 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-2 KKN - Analisis Data Monografi Desa Mekarsari (5 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 1c -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-1c.jpg" alt="Rapat Kedua 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-2 KKN - Pengumpulan Anggaran Perlengkapan Tim (5 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 2a -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-2a.jpg" alt="Rapat Ketiga 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-3 KKN - Pemetaan Program 4 Pilar (12 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 2b -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-2b.jpg" alt="Rapat Ketiga 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-3 KKN - Penyusunan Kuesioner Warga (12 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 2c -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-150">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-2c.jpg" alt="Rapat Ketiga 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-3 KKN - Pembahasan Jadwal Kegiatan Survey (12 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 3a -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-3a.jpg" alt="Survey 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Survey Lokasi - Wawancara dengan Perangkat Desa (16 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 3b -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-3b.jpg" alt="Survey 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Survey Lokasi - Peninjauan Pertanian Desa Mekarsari (16 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 3c -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-150">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-3c.jpg" alt="Survey 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Survey Lokasi - Tinjauan Batas Wilayah Desa (16 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 4a -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-4a.jpg" alt="Rapat Keempat 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-4 KKN - Finalisasi Laporan Program Kerja (21 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 4b -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-75">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-4b.jpg" alt="Rapat Keempat 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-4 KKN - Pembahasan Kebutuhan Logistik Posko (21 Juni)">
+          </div>
+        </div>
+
+        <!-- Timeline: June 4c -->
+        <div class="group relative overflow-hidden rounded-2xl bg-brand-dark shadow-sm hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 reveal-zoom delay-150">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/img/timeline/june-4c.jpg" alt="Rapat Keempat 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 cursor-pointer gallery-trigger" data-caption="Rapat Ke-4 KKN - Pembagian Tugas Keberangkatan (21 Juni)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-16 border-t border-brand-light/30 reveal"></div>
+
+      <!-- Pilar Program Kerja Utama -->
+      <div class="reveal">
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark text-center mb-4">Pilar Program Kerja Kami (SABAS)</h3>
+        <p class="text-brand-lightgray text-center text-sm sm:text-base max-w-3xl mx-auto mb-12 font-light">
+          Program kerja KKN UMMI di Desa Mekarsari diselaraskan dengan tema utama <strong>SABAS (Mekarsari Sabas: Sampah Habis, Badan Sehat, Otak Cerdas)</strong> demi mewujudkan sinergi literasi dan nilai agama dalam membangun desa.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <!-- Pilar 1: Sampah Habis -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Trash Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Sampah Habis</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Pemberdayaan pengelolaan sampah mandiri, penyediaan wadah sampah terpilah (organik & anorganik), aksi gotong royong berkala, serta kampanye kebersihan lingkungan desa bebas sampah.
+            </p>
+          </div>
+
+          <!-- Pilar 2: Badan Sehat -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Heart/Shield Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Badan Sehat</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Sosialisasi pencegahan stunting pada balita, optimalisasi Posyandu, edukasi PHBS (Perilaku Hidup Bersih & Sehat), serta sanitasi lingkungan sehat bagi seluruh keluarga di Desa Mekarsari.
+            </p>
+          </div>
+
+          <!-- Pilar 3: Otak Cerdas -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Book Open Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Otak Cerdas</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Pendampingan belajar interaktif bagi anak sekolah dasar, pembentukan pojok literasi (sudut baca), serta program bimbingan kreativitas untuk mencerdaskan generasi penerus desa.
+            </p>
+          </div>
+
+          <!-- Pilar 4: Sinergi Nilai Agama -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Sparkles Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Sinergi Agama & Karakter</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Integrasi nilai agama dalam pelestarian alam (eco-theology), pembiasaan akhlak terpuji sejak dini, serta kolaborasi aktif dalam kegiatan keagamaan masyarakat guna membangun karakter mulia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION TIM (TEAM MEMBER CARDS)
+       ========================================================================== -->
+  <section id="tim" class="py-24 bg-brand-softBg relative overflow-hidden">
+    <!-- Background accents -->
+    <div class="absolute left-10 top-1/4 w-72 h-72 bg-brand-light/30 rounded-full filter blur-2xl opacity-60"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">Tim KKN Mekarsari</h2>
+        <div class="w-24 h-1 bg-brand-medium mx-auto rounded-full mb-6"></div>
+        <p class="text-brand-lightgray text-sm sm:text-base">
+          Kolaborasi mahasiswa dari berbagai disiplin ilmu Universitas Muhammadiyah Sukabumi yang berdedikasi membangun Desa Mekarsari.
+        </p>
+      </div>
+
+      <!-- Grid Anggota Tim -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch justify-center">
+        
+        <!-- Member 1 -->
+        <div class="bg-white border border-brand-light/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between reveal-zoom">
+          <div>
+            <div class="w-24 h-24 rounded-full mx-auto overflow-hidden bg-brand-medium border-2 border-brand-yellow/50 mb-4 shadow-sm">
+              <img src="assets/img/team/team-1.jpg" alt="Foto Anggota 1" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-bold text-brand-dark leading-tight mb-1">Zulfa Ahmad Fauzi</h4>
+            <p class="text-xs font-semibold text-brand-medium uppercase tracking-wider mb-3">Koordinator Desa</p>
+          </div>
+          <p class="text-xs text-brand-lightgray/90 leading-relaxed pt-2 border-t border-brand-softBg">Teknik Informatika</p>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="bg-white border border-brand-light/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between reveal-zoom delay-75">
+          <div>
+            <div class="w-24 h-24 rounded-full mx-auto overflow-hidden bg-brand-medium border-2 border-brand-yellow/50 mb-4 shadow-sm">
+              <img src="assets/img/team/team-2.jpg" alt="Foto Anggota 2" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-bold text-brand-dark leading-tight mb-1">Siti Rahmawati</h4>
+            <p class="text-xs font-semibold text-brand-medium uppercase tracking-wider mb-3">Sekretaris Kelompok</p>
+          </div>
+          <p class="text-xs text-brand-lightgray/90 leading-relaxed pt-2 border-t border-brand-softBg">Pendidikan Guru SD</p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="bg-white border border-brand-light/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between reveal-zoom delay-150">
+          <div>
+            <div class="w-24 h-24 rounded-full mx-auto overflow-hidden bg-brand-medium border-2 border-brand-yellow/50 mb-4 shadow-sm">
+              <img src="assets/img/team/team-3.jpg" alt="Foto Anggota 3" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-bold text-brand-dark leading-tight mb-1">Aditya Pratama</h4>
+            <p class="text-xs font-semibold text-brand-medium uppercase tracking-wider mb-3">Bendahara Kelompok</p>
+          </div>
+          <p class="text-xs text-brand-lightgray/90 leading-relaxed pt-2 border-t border-brand-softBg">Akuntansi / Keuangan</p>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="bg-white border border-brand-light/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between reveal-zoom delay-200">
+          <div>
+            <div class="w-24 h-24 rounded-full mx-auto overflow-hidden bg-brand-medium border-2 border-brand-yellow/50 mb-4 shadow-sm">
+              <img src="assets/img/team/team-4.jpg" alt="Foto Anggota 4" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-bold text-brand-dark leading-tight mb-1">Rian Hidayat</h4>
+            <p class="text-xs font-semibold text-brand-medium uppercase tracking-wider mb-3">Humas & Dokumentasi</p>
+          </div>
+          <p class="text-xs text-brand-lightgray/90 leading-relaxed pt-2 border-t border-brand-softBg">Ilmu Komunikasi</p>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="bg-white border border-brand-light/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between reveal-zoom delay-300">
+          <div>
+            <div class="w-24 h-24 rounded-full mx-auto overflow-hidden bg-brand-medium border-2 border-brand-yellow/50 mb-4 shadow-sm">
+              <img src="assets/img/team/team-5.jpg" alt="Foto Anggota 5" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-bold text-brand-dark leading-tight mb-1">Alya Maulida</h4>
+            <p class="text-xs font-semibold text-brand-medium uppercase tracking-wider mb-3">Divisi Program Kerja</p>
+          </div>
+          <p class="text-xs text-brand-lightgray/90 leading-relaxed pt-2 border-t border-brand-softBg">Kesehatan Masyarakat</p>
+        </div>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="my-16 border-t border-brand-light/30 reveal"></div>
+
+      <!-- Pilar Program Kerja Utama -->
+      <div class="reveal">
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark text-center mb-4">Pilar Program Kerja Kami (SABAS)</h3>
+        <p class="text-brand-lightgray text-center text-sm sm:text-base max-w-3xl mx-auto mb-12 font-light">
+          Program kerja KKN UMMI di Desa Mekarsari diselaraskan dengan tema utama <strong>SABAS (Mekarsari Sabas: Sampah Habis, Badan Sehat, Otak Cerdas)</strong> demi mewujudkan sinergi literasi dan nilai agama dalam membangun desa.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <!-- Pilar 1: Sampah Habis -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Trash Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Sampah Habis</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Pemberdayaan pengelolaan sampah mandiri, penyediaan wadah sampah terpilah (organik & anorganik), aksi gotong royong berkala, serta kampanye kebersihan lingkungan desa bebas sampah.
+            </p>
+          </div>
+
+          <!-- Pilar 2: Badan Sehat -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Heart/Shield Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Badan Sehat</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Sosialisasi pencegahan stunting pada balita, optimalisasi Posyandu, edukasi PHBS (Perilaku Hidup Bersih & Sehat), serta sanitasi lingkungan sehat bagi seluruh keluarga di Desa Mekarsari.
+            </p>
+          </div>
+
+          <!-- Pilar 3: Otak Cerdas -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Book Open Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Otak Cerdas</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Pendampingan belajar interaktif bagi anak sekolah dasar, pembentukan pojok literasi (sudut baca), serta program bimbingan kreativitas untuk mencerdaskan generasi penerus desa.
+            </p>
+          </div>
+
+          <!-- Pilar 4: Sinergi Nilai Agama -->
+          <div class="bg-white border border-brand-light/20 p-6 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transform transition-all duration-300">
+            <div class="w-10 h-10 flex items-center justify-center bg-brand-medium/10 text-brand-medium rounded-xl mb-5">
+              <!-- Sparkles Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-brand-dark mb-2 text-base">Sinergi Agama & Karakter</h4>
+            <p class="text-xs sm:text-sm text-brand-lightgray leading-relaxed font-light">
+              Integrasi nilai agama dalam pelestarian alam (eco-theology), pembiasaan akhlak terpuji sejak dini, serta kolaborasi aktif dalam kegiatan keagamaan masyarakat guna membangun karakter mulia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION KONTAK (CONTACT & FOOTER)
+       ========================================================================== -->
+  <section id="kontak" class="bg-brand-dark text-white pt-24 pb-12 relative overflow-hidden">
+    <!-- Absolute Decorative circles -->
+    <div class="absolute left-0 bottom-0 w-96 h-96 bg-brand-medium/20 rounded-full filter blur-3xl pointer-events-none"></div>
+    <div class="absolute right-0 top-0 w-96 h-96 bg-brand-yellow/5 rounded-full filter blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Layout 2 Kolom -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start pb-16 border-b border-brand-light/10">
+        
+        <!-- Info Column (L: 5/12) -->
+        <div class="lg:col-span-5 reveal-left">
+          <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-yellow mb-3">HUBUNGI KAMI</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-6">Terhubung dengan Pengabdian Kami</h2>
+          <p class="text-brand-light/80 mb-8 font-light text-sm sm:text-base leading-relaxed">
+            Ikuti keseharian kami di posko KKN Desa Mekarsari, berikan saran program, atau ajukan kerja sama kemasyarakatan melalui media sosial resmi kami.
+          </p>
+
+          <!-- Contact items -->
+          <div class="space-y-6">
+            
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-4 p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div class="w-10 h-10 flex items-center justify-center bg-brand-yellow text-brand-dark rounded-xl shadow group-hover:scale-105 transition-transform duration-300">
+                <!-- Instagram Icon -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke-width="2"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"></line>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-brand-light/60 font-semibold uppercase tracking-wider leading-none mb-1">Instagram</span>
+                <span class="text-sm font-bold text-white group-hover:text-brand-yellow transition-colors">@kkn_mekarsari_ummi</span>
+              </div>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-4 p-4 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div class="w-10 h-10 flex items-center justify-center bg-brand-yellow text-brand-dark rounded-xl shadow group-hover:scale-105 transition-transform duration-300">
+                <!-- Music/TikTok icon -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-brand-light/60 font-semibold uppercase tracking-wider leading-none mb-1">TikTok</span>
+                <span class="text-sm font-bold text-white group-hover:text-brand-yellow transition-colors">@kkn.mekarsari</span>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <div class="flex items-center space-x-4 p-4 bg-white/5 border border-white/5 rounded-2xl">
+              <div class="w-10 h-10 flex items-center justify-center bg-brand-yellow text-brand-dark rounded-xl shadow">
+                <!-- Mail Icon -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-brand-light/60 font-semibold uppercase tracking-wider leading-none mb-1">Email</span>
+                <span class="text-sm font-bold text-white">kkn.mekarsari.ummi@gmail.com</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Details / Location Column (R: 7/12) -->
+        <div class="lg:col-span-7 space-y-8 reveal-right">
+          
+          <!-- Address Card -->
+          <div class="bg-white/5 border border-white/5 p-6 sm:p-8 rounded-3xl">
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-4">Lokasi Posko KKN</h3>
+            <p class="text-brand-light/85 text-sm sm:text-base font-light mb-6 leading-relaxed">
+              Posko KKN Desa Mekarsari berlokasi di Dusun Mekarsari, RT 02 / RW 04, Desa Mekarsari, Kecamatan Sagaranten, Kabupaten Sukabumi, Jawa Barat (Kode Pos 43181).
+            </p>
+            
+            <!-- Google Maps Embed Card -->
+            <div class="h-48 w-full rounded-2xl overflow-hidden border border-white/10 shadow-md">
+              <iframe 
+                src="https://maps.google.com/maps?q=Kantor%20Desa%20Mekarsari%20Sagaranten%20Sukabumi&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                class="w-full h-full border-0 filter grayscale-[15%] contrast-[105%] brightness-[95%]" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Campus info card -->
+          <div class="bg-brand-medium/10 border border-brand-medium/30 p-6 sm:p-8 rounded-3xl flex items-start space-x-4">
+            <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-brand-medium text-brand-yellow rounded-xl shadow">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-1">Lembaga Penelitian & Pengabdian Masyarakat (LPPM)</h4>
+              <p class="text-brand-light/80 text-xs sm:text-sm font-light leading-relaxed">
+                Universitas Muhammadiyah Sukabumi. Jalan Syamsudin S.H. No. 50, Cikole, Kec. Cikole, Kota Sukabumi, Jawa Barat (43113).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer bottom details -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4 text-xs text-brand-light/60 font-medium select-none">
+        <div>
+          &copy; 2026 KKN Desa Mekarsari. All Rights Reserved.
+        </div>
+        <div class="flex items-center justify-center space-x-2">
+          <span>Dibuat dengan</span>
+          <span class="text-brand-yellow animate-pulse">&hearts;</span>
+          <span>oleh Tim KKN UMMI Sukabumi</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX (ZOOM GALLERY VIEW)
+       ========================================================================== -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Tutup Galeri">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <div class="lightbox-wrap flex flex-col items-center justify-center p-4 max-w-full max-h-full">
+      <img id="lightbox-img" src="" alt="Zoom Tampilan Dokumentasi" class="lightbox-content select-none">
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       MAIN JAVASCRIPT
+       ========================================================================== -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

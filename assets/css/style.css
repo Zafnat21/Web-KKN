@@ -1,0 +1,308 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+
+/* Basic setup and custom properties */
+:root {
+  --color-brand-dark: #1b4332;
+  --color-brand-medium: #2d6a4f;
+  --color-brand-light: #d8f3dc;
+  --color-brand-soft: #f4f9f4;
+  --color-brand-yellow: #fcf3c6;
+  --color-brand-text: #2d3748;
+}
+
+/* Smooth Scrolling */
+html {
+  /* scroll-behavior: smooth; */ /* Handled via customized javascript cubic easing for luxurious feel */
+  scroll-padding-top: 80px; /* Offset to prevent fixed navbar from covering headings */
+}
+
+/* Base Body Styles */
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--color-brand-text);
+  background-color: var(--color-brand-soft);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-soft);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-dark);
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-left.reveal-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-right.reveal-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.93);
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-zoom.reveal-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Delay modifiers for sequential scroll entry */
+.delay-75 { transition-delay: 75ms; }
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* ==========================================================================
+   INITIAL PAGE LOAD ENTRANCE ANIMATIONS
+   ========================================================================== */
+.animate-on-load {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.loaded .animate-on-load {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay classes for page load */
+.load-delay-75  { transition-delay: 75ms; }
+.load-delay-100 { transition-delay: 100ms; }
+.load-delay-150 { transition-delay: 150ms; }
+.load-delay-200 { transition-delay: 200ms; }
+.load-delay-300 { transition-delay: 300ms; }
+.load-delay-450 { transition-delay: 450ms; }
+.load-delay-600 { transition-delay: 600ms; }
+
+/* ==========================================================================
+   IMAGE FALLBACK TEMPLATE
+   ========================================================================== */
+.img-fallback-container {
+  position: relative;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  text-align: center;
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(216, 243, 220, 0.3);
+  padding: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.img-fallback-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 244, 207, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   LIGHTBOX COMPONENT
+   ========================================================================== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 18, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-caption {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+  max-width: 80%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   TIMELINE DECORATION
+   ========================================================================== */
+.timeline-line {
+  position: absolute;
+  left: 1.5rem; /* center aligned on mobile index */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-brand-medium) 0%, var(--color-brand-light) 100%);
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 2rem;
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 1.5rem;
+  transform: translateX(-50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-brand-yellow);
+  border: 3px solid var(--color-brand-medium);
+  box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    left: 2rem;
+  }
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: var(--color-brand-medium);
+  border-color: var(--color-brand-yellow);
+  box-shadow: 0 0 0 6px rgba(45, 106, 79, 0.4);
+  transform: translateX(-50%) scale(1.2);
+}
+
+/* Active sticky months styling (Toei style) */
+.month-btn {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.month-btn.active {
+  color: var(--color-brand-dark) !important;
+  transform: translateX(4px);
+}
+
+.month-btn.active .month-dot-inner {
+  border-color: var(--color-brand-medium) !important;
+  background-color: var(--color-brand-yellow) !important;
+  box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.2);
+  transform: scale(1.15);
+}
+
+.month-btn.active .month-dot-core {
+  background-color: var(--color-brand-medium) !important;
+}
+
+/* Active Nav Links styling */
+.nav-link.active {
+  color: var(--color-brand-yellow) !important;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-brand-yellow);
+  border-radius: 2px;
+}
